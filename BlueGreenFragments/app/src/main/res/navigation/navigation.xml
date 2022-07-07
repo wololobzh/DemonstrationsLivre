@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/principalFragment">
+
+    <fragment
+        android:id="@+id/principalFragment"
+        android:name="fr.wololobzh.blue_green_fragments.PrincipalFragment"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFragment_to_blueFragment"
+            app:destination="@id/blueFragment" />
+        <action
+            android:id="@+id/action_principalFragment_to_greenFragment"
+            app:destination="@id/greenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="fr.wololobzh.blue_green_fragments.BlueFragment"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" />
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="fr.wololobzh.blue_green_fragments.GreenFragment"
+        android:label="fragment_green"
+        tools:layout="@layout/fragment_green" />
+</navigation>
