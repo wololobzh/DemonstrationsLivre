@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="personne"
+            type="fr.wololobzh.methode_databinding.Personne" />
+        <variable
+            name="titre"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_titre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{titre}"
+            />
+
+        <EditText
+            android:id="@+id/et_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={personne.nom}"
+            app:layout_constraintTop_toBottomOf="@id/tv_titre"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/et_prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={personne.prenom}"
+            app:layout_constraintTop_toBottomOf="@id/et_nom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/et_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={personne.numero}"
+            app:layout_constraintTop_toBottomOf="@id/et_prenom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/et_rue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={personne.rue}"
+            app:layout_constraintTop_toBottomOf="@id/et_numero"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/et_ville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={personne.ville}"
+            app:layout_constraintTop_toBottomOf="@id/et_rue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/et_code_postal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={personne.codePostal}"
+            app:layout_constraintTop_toBottomOf="@id/et_ville"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <Button
+            android:id="@+id/btn_envoyer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_code_postal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Envoyer"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
