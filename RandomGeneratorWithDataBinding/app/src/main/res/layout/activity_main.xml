@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="minimum"
+            type="String" />
+
+        <variable
+            name="maximum"
+            type="String" />
+
+        <variable
+            name="aleatoire"
+            type="Integer" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/tv_titre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="True Random Number Generator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/etn_minimum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Minimum"
+            android:text="@={minimum}"
+            android:ems="15"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_titre"
+            android:layout_marginTop="70dp"
+            />
+        <EditText
+            android:id="@+id/etn_maximum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Maximum"
+            android:text="@={maximum}"
+            android:ems="15"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etn_minimum"
+            />
+        <Button
+            android:id="@+id/btn_generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etn_maximum"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/tv_titre_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Résultat :"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_generate"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/tv_valeur_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(aleatoire)}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_titre_resultat"
+            android:layout_marginTop="30dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
