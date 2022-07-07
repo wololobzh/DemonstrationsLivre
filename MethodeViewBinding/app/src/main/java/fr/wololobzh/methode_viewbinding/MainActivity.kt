@@ -7,19 +7,19 @@ import fr.wololobzh.methode_viewbinding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity()
 {
-    private lateinit var bd: ActivityMainBinding
+    private lateinit var vb: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bd = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(bd.root)
+        vb = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(vb.root)
 
-        bd.tvTitre.text = "Formulaire 53D";
+        vb.tvTitre.text = "Formulaire 53D";
 
-        bd.btnEnvoyer.setOnClickListener {
-            Log.i("ACOS","Bonjour ${bd.etPrenom.text} " +
-                    "${bd.etNom.text}, vous habitez à ${bd.etNumero.text} " +
-                    "${bd.etRue.text} ${bd.etCodePostal.text} ${bd.etVille.text} ")
+        vb.btnEnvoyer.setOnClickListener {
+            Log.i("ACOS","Bonjour ${vb.etPrenom.text} " +
+                    "${vb.etNom.text}, vous habitez à ${vb.etNumero.text} " +
+                    "${vb.etRue.text} ${vb.etCodePostal.text} ${vb.etVille.text} ")
         }
     }
 }
