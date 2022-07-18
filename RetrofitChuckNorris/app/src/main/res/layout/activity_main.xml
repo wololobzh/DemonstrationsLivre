@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="Model"
+            type="fr.acos.retrofitchucknorris.RandomjokeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#E91E63"
+        >
+        <TextView
+            android:id="@+id/tv_bonjour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="!!!!!!! Bonjour à toutes et à tous !!!!!!!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#FFEB3B"
+            />
+        <TextView
+            android:id="@+id/tv_joke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_bonjour"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@{Model.joke.joke}"
+            android:textColor="#FFEB3B"
+            />
+        <Button
+            android:id="@+id/btn_blague"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_joke"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:backgroundTint="#FFEB3B"
+            android:textColor="@color/black"
+            android:text="BLAGUE"
+            android:onClick="@{() -> Model.randomBlague()}"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
