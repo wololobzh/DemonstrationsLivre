@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "63899205016",
+    "project_id": "demofirebaserealtimedata-adb13",
+    "storage_bucket": "demofirebaserealtimedata-adb13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63899205016:android:c510361417c503ad4ebfed",
+        "android_client_info": {
+          "package_name": "fr.acos.demofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63899205016-fsofauv51kh68vtesmu7t2m5fthm1ae9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCsGkGbO56xYpQzr3yzNSwGWeOWYgqdz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63899205016-fsofauv51kh68vtesmu7t2m5fthm1ae9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
